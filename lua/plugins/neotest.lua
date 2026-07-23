@@ -1,3 +1,4 @@
+local root = require("snacks").git.get_root()
 return {
   {
     "nvim-neotest/neotest",
@@ -8,7 +9,7 @@ return {
             "-v",
             "-race",
             "-count=1",
-            "-coverprofile=coverage.out",
+            "-coverprofile=" .. root .. "/coverage.out",
             "-covermode=atomic",
           },
         },
